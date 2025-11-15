@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud Travel Agency - Premium Booking</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #eef6ff;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #007bff, #00c6ff);
+      padding: 40px 20px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 { font-size: 3rem; letter-spacing: 1px; }
+    header p { margin-top: 10px; font-size: 1.2rem; }
+
+    nav {
+      background: #005bbb;
+      padding: 15px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 600;
+      transition: .3s;
+      font-size: 1.1rem;
+    }
+    nav a:hover { color: #ffeb3b; }
+
+    .hero {
+      background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") no-repeat center center/cover;
+      height: 450px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      font-size: 2.5rem;
+      text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+      padding: 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 40px 0 15px;
+      font-size: 2.5rem;
+      color: #005bbb;
+      font-weight: 700;
+    }
+
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: .4s;
+      cursor: pointer;
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card:hover { transform: translateY(-10px); }
+
+    .card-content { padding: 18px; }
+    .card-content h3 { font-size: 1.6rem; color: #007bff; }
+    .card-content p { margin: 8px 0; }
+    .price { font-size: 1.2rem; font-weight: bold; color: #e91e63; }
+
+    .booking-form {
+      background: white;
+      width: 90%;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .booking-form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .booking-form input, .booking-form select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      margin-top: 5px;
+      font-size: 1rem;
+    }
+
+    .booking-form button {
+      width: 100%;
+      background: #007bff;
+      color: white;
+      padding: 12px;
+      margin-top: 20px;
+      border-radius: 10px;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: .3s;
+    }
+    .booking-form button:hover { background: #005bbb; }
+
+    .success-box {
+      background: #d4edda;
+      padding: 15px;
+      color: #155724;
+      border-left: 5px solid #28a745;
+      margin-top: 20px;
+      border-radius: 8px;
+      display: none;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #003f7d;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Cloud Travel Agency</h1>
+  <p>Fly Beyond Limits. Book Your Dream Destination Today.</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#packages">Packages</a>
+  <a href="#booking">Book Now</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">Adventure Awaits — Explore The World!</div>
+
+<h2 class="section-title" id="packages">Top Travel Packages</h2>
+<div class="packages">
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" />
+    <div class="card-content">
+      <h3>Paris, France</h3>
+      <p>Romance, luxury, and the Eiffel Tower experience.</p>
+      <p class="price">₹89,999 / person</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" />
+    <div class="card-content">
+      <h3>Bali, Indonesia</h3>
+      <p>Beaches, temples, nightlife and full relaxation.</p>
+      <p class="price">₹59,999 / person</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401" />
+    <div class="card-content">
+      <h3>New York, USA</h3>
+      <p>Times Square, Broadway, Central Park, and skyscrapers.</p>
+      <p class="price">₹1,29,999 / person</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" />
+    <div class="card-content">
+      <h3>Manali, India</h3>
+      <p>Snow mountains, trekking, rafting and nature views.</p>
+      <p class="price">₹19,999 / person</p>
+    </div>
+  </div>
+
+</div>
+
+<h2 class="section-title" id="booking">Book Your Package</h2>
+
+<form class="booking-form" onsubmit="event.preventDefault(); document.getElementById('success').style.display='block';">
+  <label>Full Name</label>
+  <input type="text" required placeholder="Enter your full name" />
+
+  <label>Email</label>
+  <input type="email" required placeholder="Enter your email" />
+
+  <label>Select Destination</label>
+  <select required>
+    <option value="">Choose destination</option>
+    <option>Paris</option>
+    <option>Bali</option>
+    <option>New York</option>
+    <option>Manali</option>
+  </select>
+
+  <label>Travel Date</label>
+  <input type="date" required />
+
+  <button type="submit">Submit Booking</button>
+
+  <div class="success-box" id="success">🎉 Your Package is Successfully Booked!</div>
+</form>
+
+<footer>
+  © 2025 Cloud Travel Agency | All Rights Reserved
+</footer>
+
+</body>
+</html>
